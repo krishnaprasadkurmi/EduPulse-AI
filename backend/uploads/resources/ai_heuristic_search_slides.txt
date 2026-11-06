@@ -1,0 +1,9 @@
+=== CS304 ARTIFICIAL INTELLIGENCE ===
+HEURISTIC SEARCH & ADVERSARIAL GAMES
+
+1. A* Search: f(n) = g(n) + h(n)
+   - Admissible: h(n) <= h*(n)
+   - Consistent (Monotonic): h(n) <= c(n, a, n') + h(n')
+2. Minimax with Alpha-Beta Pruning
+   - Alpha: Best choice found so far for MAX
+   - Beta: Best choice found so far for MIN.

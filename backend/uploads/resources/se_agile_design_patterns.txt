@@ -1,0 +1,7 @@
+=== CS306 SOFTWARE ENGINEERING ===
+AGILE METHODOLOGIES & GANG OF FOUR PATTERNS
+
+1. Agile Manifesto & Scrum Framework (Sprints, Retrospectives, Standups)
+2. Creational Patterns: Singleton, Factory, Builder
+3. Structural Patterns: Adapter, Facade, Decorator
+4. Behavioral Patterns: Observer, Strategy, Command.

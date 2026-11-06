@@ -1,0 +1,14 @@
+=== CS301 DATABASE MANAGEMENT SYSTEMS ===
+UNIT 3: RELATIONAL DATABASE DESIGN & NORMALIZATION
+
+1. Functional Dependencies (FDs)
+   An FD X -> Y specifies that the value of X uniquely determines Y.
+2. Normal Forms:
+   - 1NF: Atomic attribute values.
+   - 2NF: 1NF + No partial dependencies on candidate keys.
+   - 3NF: 2NF + No transitive dependencies (X -> A implies X is superkey or A is prime).
+   - BCNF: For every FD X -> A, X must be a superkey.
+
+3. Decompositions:
+   - Lossless join guarantee: R1 ∩ R2 -> R1 or R1 ∩ R2 -> R2
+   - Dependency preservation.

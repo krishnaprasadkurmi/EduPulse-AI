@@ -1,0 +1,8 @@
+=== CS302 OPERATING SYSTEMS ===
+UNIT 4: VIRTUAL MEMORY, PAGING & TRANSLATION LOOKASIDE BUFFER (TLB)
+
+1. Logical vs Physical Address Space
+2. Page Tables & Inverted Page Tables
+3. Page Replacement Algorithms:
+   - FIFO, LRU (Least Recently Used), Optimal (Belady’s Anomaly)
+4. Thrashing and Working Set Model.

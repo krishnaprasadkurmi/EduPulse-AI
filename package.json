@@ -1,0 +1,20 @@
+{
+  "name": "edupulse-ai",
+  "version": "1.0.0",
+  "description": "EduPulse AI - Intelligent Student Academic Monitoring & Support System",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:server": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:client": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "seed": "cd backend && npm run seed",
+    "backend": "cd backend && npm start",
+    "server": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "db:view": "node backend/view-db.js"
+  }
+}

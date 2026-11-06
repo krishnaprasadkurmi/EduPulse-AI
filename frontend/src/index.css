@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased transition-colors duration-200;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.06) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-[#090d16];
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-700;
+}
+
+/* Card panel styles with light & dark mode support */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+}
+
+/* Light / Bright Mode contrast protections */
+html:not(.dark) .glass-panel h1,
+html:not(.dark) .glass-panel h2,
+html:not(.dark) .glass-panel h3,
+html:not(.dark) .glass-panel h4 {
+  color: #0f172a;
+}
+
+html:not(.dark) .glass-panel .text-slate-100:not(pre *):not(code *),
+html:not(.dark) .glass-panel .text-slate-200:not(pre *):not(code *) {
+  color: #0f172a;
+}
+
+html:not(.dark) .glass-panel .text-slate-300:not(pre *):not(code *) {
+  color: #334155;
+}
+
+html:not(.dark) .glass-panel .text-slate-400:not(pre *):not(code *) {
+  color: #64748b;
+}
+
+html:not(.dark) .glass-panel pre,
+html:not(.dark) .glass-panel code,
+html:not(.dark) pre,
+html:not(.dark) code {
+  color: #a7f3d0;
+}
+
+html:not(.dark) main h1:not([class*="bg-clip-text"]),
+html:not(.dark) main h2:not([class*="bg-clip-text"]),
+html:not(.dark) main h3:not([class*="bg-clip-text"]) {
+  color: #0f172a;
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  color: #f8fafc;
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.dark .glass-panel-hover:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(99, 102, 241, 0.15);
+}
+
+/* Glowing text and pulse effects */
+.glow-text-indigo {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+.glow-text-emerald {
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+}
+.glow-text-red {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Floating bobbing animation for Copilot Mascot */
+@keyframes floatBob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-bob {
+  animation: floatBob 3.2s ease-in-out infinite;
+}
+

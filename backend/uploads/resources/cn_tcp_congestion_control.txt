@@ -1,0 +1,9 @@
+=== CS305 COMPUTER NETWORKS ===
+TCP TRANSPORT LAYER PROTOCOLS & FLOW CONTROL
+
+1. TCP 3-Way Handshake: SYN -> SYN-ACK -> ACK
+2. Connection Teardown: FIN -> ACK -> FIN -> ACK
+3. Congestion Control Phases:
+   - Slow Start (Exponential growth)
+   - Congestion Avoidance (Linear growth: AIMD)
+   - Fast Retransmit & Fast Recovery.

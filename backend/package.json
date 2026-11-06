@@ -1,0 +1,26 @@
+{
+  "name": "edupulse-backend",
+  "version": "1.0.0",
+  "description": "EduPulse AI Backend Server",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "build": "echo Backend build ready",
+    "seed": "node seed/seed.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^8.9.5",
+    "node-cron": "^4.6.0",
+    "nodemailer": "^10.0.13"
+  }
+}

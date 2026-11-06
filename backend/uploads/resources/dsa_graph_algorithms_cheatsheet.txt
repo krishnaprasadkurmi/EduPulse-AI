@@ -1,0 +1,8 @@
+=== CS303 DATA STRUCTURES & ALGORITHMS ===
+UNIT 5: GRAPH ALGORITHMS CHEATSHEET
+
+1. BFS (O(V + E)) - Shortest path in unweighted graphs
+2. DFS (O(V + E)) - Topological sort & cycle detection
+3. Dijkstra Algorithm (O((V + E) log V)) - Non-negative edge weights
+4. Bellman-Ford (O(V * E)) - Negative edge weights & negative cycle detection
+5. Minimum Spanning Trees: Kruskal and Prim algorithms.
