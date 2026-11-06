@@ -4,13 +4,16 @@ let mongodInstance = null;
 
 const connectDB = async () => {
   const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/edupulse';
+  const isRemote = uri.includes('mongodb+srv://') || (process.env.MONGODB_URI && !process.env.MONGODB_URI.includes('127.0.0.1') && !process.env.MONGODB_URI.includes('localhost'));
+  const timeoutMs = isRemote ? 15000 : 3000;
   
   try {
-    // Attempt standard connection with 3s timeout
+    // Attempt connection (15s for remote cloud DB, 3s for local fallback)
     await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 2500,
+      serverSelectionTimeoutMS: timeoutMs,
     });
-    console.log(`[Database] MongoDB connected successfully to: ${uri}`);
+    const logUri = isRemote ? uri.replace(/\/\/[^:]+:[^@]+@/, '//***:***@') : uri;
+    console.log(`[Database] MongoDB connected successfully to: ${logUri}`);
   } catch (err) {
     console.warn(`[Database] Warning: Could not connect to external MongoDB at ${uri} (${err.message}).`);
     console.log('[Database] Initializing embedded MongoDB Memory Server for seamless hackathon demo...');
